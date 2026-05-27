@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-// ADVANCED STYLES FOR THE FULL-STACK AI PORTFOLIO HUB
+// DESIGN MODULE SYSTEM WITH DEDICATED CENTERED CONTACT SECTION
 const styles = {
   container: { minHeight: '100vh', backgroundColor: '#0a0a0a', color: '#e5e5e5', fontFamily: 'monospace', padding: '0', margin: '0', position: 'relative', overflowX: 'hidden' },
   header: { borderBottom: '1px solid #262626', backgroundColor: 'rgba(10, 10, 10, 0.8)', padding: '1.25rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 50, backdropFilter: 'blur(8px)' },
@@ -47,15 +47,20 @@ const styles = {
   skillTitle: { fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '0.5rem', letterSpacing: '0.05em' },
   skillList: { fontFamily: 'sans-serif', fontSize: '0.875rem', color: '#d4d4d4', lineHeight: '1.6', margin: 0 },
   
-  // SCROLLABLE ACHIEVEMENTS MATRIX
   achievementsContainer: { backgroundColor: '#171717', border: '1px solid #262626', borderRadius: '8px', overflow: 'hidden' },
   achievementRow: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '1rem 1.5rem', borderBottom: '1px solid #212121', fontSize: '0.875rem' },
   
+  // CENTERED CONNECT METRIC HUB STYLES
+  contactWrapper: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '3.5rem 2rem', backgroundColor: 'rgba(23, 23, 23, 0.4)', border: '1px solid #262626', borderRadius: '12px', gap: '1.5rem' },
+  socialDockCentered: { display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '3rem', marginTop: '1rem' },
+  largeSocialIcon: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#a3a3a3', transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)', textDecoration: 'none', gap: '0.75rem' },
+  iconLabel: { fontSize: '0.75rem', letterSpacing: '0.15em', textTransform: 'uppercase', color: '#737373', transition: 'color 0.3s' },
+
   // MODAL VIEWPORT OVERLAY
   modalOverlay: { position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(5, 5, 5, 0.96)', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', zIndex: 100, cursor: 'zoom-out' },
   modalImage: { maxWidth: '85%', maxHeight: '80%', borderRadius: '12px', border: '2px solid #10b981', boxShadow: '0 0 40px rgba(16, 185, 129, 0.3)' },
   modalCloseText: { color: '#737373', fontSize: '0.875rem', marginTop: '1.5rem', letterSpacing: '0.1em' },
-  footer: { borderTop: '1px solid #262626', backgroundColor: '#0a0a0a', marginTop: '6rem', padding: '2rem', fontSize: '0.75rem', color: '#737373', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }
+  footer: { borderTop: '1px solid #262626', backgroundColor: '#0a0a0a', padding: '2rem', fontSize: '0.75rem', color: '#525252', display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }
 };
 
 const App = () => {
@@ -64,13 +69,11 @@ const App = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
 
-  // SECURE ARRAY MATCHING YOUR LOCAL IMAGES IN /PUBLIC
   const photoMatrix = [
-    "/img12.jpeg","/img1.jpeg", "/img2.jpeg", "/img3.jpeg", "/img4.jpeg", "/img5.jpeg",
-    "/img6.jpeg", "/img7.jpeg", "/img8.jpeg", "/img9.jpeg", "/img10.jpeg", "/img11.jpeg"
+   "/img12.jpeg", "/img1.jpeg", "/img2.jpeg", "/img3.jpeg", "/img4.jpeg", "/img5.jpeg",
+    "/img6.jpeg", "/img7.jpeg", "/img8.jpeg", "/img9.jpeg", "/img10.jpeg", "/img11.jpeg", 
   ];
 
-  // INTERACTIVE CYCLING ENGINE
   useEffect(() => {
     const slideTimer = setInterval(() => {
       setCurrentImgIndex((prevIndex) => (prevIndex + 1) % photoMatrix.length);
@@ -114,10 +117,8 @@ const App = () => {
 
       <main style={styles.main}>
         
-        {/* CENTERED HERO LAYOUT WITH EXPANDED REVOLVING PORTRAIT */}
+        {/* CENTERED HERO LAYOUT WITH PORTRAIT */}
         <section style={styles.heroLayout}>
-          
-          {/* PROFILE RIG */}
           <div style={styles.profileColumn}>
             <div 
               style={styles.avatarBigCircle} 
@@ -134,34 +135,24 @@ const App = () => {
               }}
               title="Click to zoom identity frame"
             >
-              <img 
-                src={photoMatrix[currentImgIndex]} 
-                alt="Rajan Pandey Matrix Node" 
-                style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'all 0.4s ease-in-out' }}
-              />
+              <img src={photoMatrix[currentImgIndex]} alt="Rajan Pandey Matrix Node" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'all 0.4s ease-in-out' }} />
             </div>
             <div style={{ color: '#737373', fontSize: '0.75rem' }}>
-              REVOLVING REGISTER: <span style={{ color: '#10b981' }}>0{currentImgIndex + 1}</span> / 11
+              REVOLVING REGISTER: <span style={{ color: '#10b981' }}>0{currentImgIndex + 1}</span> / {photoMatrix.length}
             </div>
           </div>
 
-          {/* BIO METRIC SUMMARY MODULE */}
           <div style={styles.infoColumn}>
-            <div style={styles.badge}>
-              Electronics, Communication & Information Engineering
-            </div>
-            <h1 style={styles.headline}>
-              Bridging <span style={styles.gradientText}>Silicon, Full-Stack</span> & AI
-            </h1>
+            <div style={styles.badge}>Electronics, Communication & Information Engineering</div>
+            <h1 style={styles.headline}>Bridging <span style={styles.gradientText}>Silicon, Full-Stack</span> & AI</h1>
             <p style={styles.paragraph}>
               Engineering student specializing in Electronics, Communication, and Information Engineering with hands-on experience designing and implementing machine learning models and AI-powered agents. Proficient in Python and scikit-learn, with full-stack expertise in integrating ML workflows into web applications. Passionate about applying end-to-end ML solutions to enhance user experience in a collaborative internship setting.
             </p>
             <div style={styles.btnContainer}>
               <a href="#projects" style={styles.primaryBtn}>Execute Core Systems</a>
-              <a href="#experience" style={styles.secondaryBtn}>Verify Records</a>
+              <a href="#contact" style={styles.secondaryBtn}>Secure Handshake</a>
             </div>
           </div>
-
         </section>
 
         {/* INTERACTIVE SYSTEM BASH KERNEL */}
@@ -221,7 +212,6 @@ const App = () => {
         <section id="projects">
           <h2 style={styles.sectionTitle}>.Systems_Architecture_Log()</h2>
           <div style={styles.grid2Col}>
-            
             <div style={styles.projectCard}>
               <div style={styles.projectBody}>
                 <h3 style={styles.projectTitle}>Vision Automated Attendance Rig</h3>
@@ -261,7 +251,6 @@ const App = () => {
               </div>
               <div style={styles.projectTagFooter}>Flask // Oracle Database // Telemetry Fusion // Circuit Schematics</div>
             </div>
-
           </div>
         </section>
 
@@ -313,7 +302,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* competitive ROBOTICS LEAGUE SCOREBOARD */}
+        {/* ROBOTICS LEAGUE SCOREBOARD */}
         <section id="achievements">
           <h2 style={styles.sectionTitle}>.Robotics_Championship_Registry()</h2>
           <div style={styles.achievementsContainer}>
@@ -322,45 +311,98 @@ const App = () => {
               <span>TEAM NAME</span>
               <span>STANDING REGISTERED</span>
             </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Sumo — EEPEX 2025, Kathmandu University</span>
-              <span style={{ color: '#22d3ee' }}>Team The Boatminds</span>
-              <span style={{ color: '#10b981', fontWeight: 'bold' }}>CHAMPION (1st Position)</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Race — Yathartha 2.0, IOE Thapathali Campus</span>
-              <span style={{ color: '#22d3ee' }}>Team The Boatminds</span>
-              <span style={{ color: '#10b981', fontWeight: 'bold' }}>CHAMPION (1st Position)</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Football — KEC Lite, Kantipur Engineering College</span>
-              <span style={{ color: '#22d3ee' }}>Team The Boatminds</span>
-              <span style={{ color: '#10b981', fontWeight: 'bold' }}>CHAMPION (1st Position)</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo War — Locus 2025, Pulchowk Campus</span>
-              <span style={{ color: '#737373' }}>Team The Boatminds</span>
-              <span style={{ color: '#eab308' }}>1st Runner Up</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Soccer — Locus 2025, Pulchowk Campus</span>
-              <span style={{ color: '#737373' }}>Team The Boatminds</span>
-              <span style={{ color: '#eab308' }}>1st Runner Up</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Race — Orbit Engineering Expo 2.0</span>
-              <span style={{ color: '#737373' }}>Team The Binary Bots</span>
-              <span style={{ color: '#eab308' }}>1st Runner Up</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Drift — Dristi 3.0, Kathmandu Engineering College</span>
-              <span style={{ color: '#737373' }}>Team The Boatminds</span>
-              <span style={{ color: '#eab308' }}>1st Runner Up</span>
-            </div>
-            <div style={styles.achievementRow}>
-              <span>Robo Yuddha — Manual Sumo Competition 2081, Khwopa</span>
-              <span style={{ color: '#737373' }}>Team The Binary Bots</span>
-              <span style={{ color: '#a3a3a3' }}>2nd Runner Up</span>
+            <div style={styles.achievementRow}><span>Robo Sumo — EEPEX 2025, Kathmandu University</span><span style={{ color: '#22d3ee' }}>Team The Boatminds</span><span style={{ color: '#10b981', fontWeight: 'bold' }}>CHAMPION (1st Position)</span></div>
+            <div style={styles.achievementRow}><span>Robo Race — Yathartha 2.0, IOE Thapathali Campus</span><span style={{ color: '#22d3ee' }}>Team The Boatminds</span><span style={{ color: '#10b981', fontWeight: 'bold' }}>CHAMPION (1st Position)</span></div>
+            <div style={styles.achievementRow}><span>Robo Football — KEC Lite, Kantipur Engineering College</span><span style={{ color: '#22d3ee' }}>Team The Boatminds</span><span style={{ color: '#10b981', fontWeight: 'bold' }}>CHAMPION (1st Position)</span></div>
+            <div style={styles.achievementRow}><span>Robo War — Locus 2025, Pulchowk Campus</span><span style={{ color: '#737373' }}>Team The Boatminds</span><span style={{ color: '#eab308' }}>1st Runner Up</span></div>
+            <div style={styles.achievementRow}><span>Robo Soccer — Locus 2025, Pulchowk Campus</span><span style={{ color: '#737373' }}>Team The Boatminds</span><span style={{ color: '#eab308' }}>1st Runner Up</span></div>
+            <div style={styles.achievementRow}><span>Robo Race — Orbit Engineering Expo 2.0</span><span style={{ color: '#737373' }}>Team The Binary Bots</span><span style={{ color: '#eab308' }}>1st Runner Up</span></div>
+            <div style={styles.achievementRow}><span>Robo Drift — Dristi 3.0, Kathmandu Engineering College</span><span style={{ color: '#737373' }}>Team The Boatminds</span><span style={{ color: '#eab308' }}>1st Runner Up</span></div>
+            <div style={styles.achievementRow}><span>Robo Yuddha — Manual Sumo Competition 2081, Khwopa</span><span style={{ color: '#737373' }}>Team The Binary Bots</span><span style={{ color: '#a3a3a3' }}>2nd Runner Up</span></div>
+          </div>
+        </section>
+
+        {/* NEW DEDICATED CENTERED CONNECT / CONTACT SECTION */}
+        <section id="contact">
+          <h2 style={styles.sectionTitle}>.Connect_Me()</h2>
+          <div style={styles.contactWrapper}>
+            <div style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#22d3ee' }}>// INITIALIZE PORTS FOR SYSTEM HANDSHAKE</div>
+            <p style={{ fontFamily: 'sans-serif', color: '#a3a3a3', margin: '0 0 1rem 0', maxWidth: '28rem', fontSize: '0.875rem', lineHeight: '1.5' }}>
+              Select an external link protocol below to coordinate direct communication channels or view active platform nodes.
+            </p>
+            
+            <div style={styles.socialDockCentered}>
+              
+              {/* LINKEDIN PROFILE ACCESS PORT */}
+              <a 
+                href="https://www.linkedin.com/in/rajan-pandey-sarkar-rajan/" 
+                target="_blank" 
+                rel="noreferrer" 
+                style={styles.largeSocialIcon}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#10b981';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.lastChild.style.color = '#10b981';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#a3a3a3';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.lastChild.style.color = '#737373';
+                }}
+              >
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+                <span style={styles.iconLabel}>LinkedIn</span>
+              </a>
+
+              {/* FACEBOOK LINK PORT */}
+              <a 
+                href="https://www.facebook.com/rajan.pandey.393950" 
+                target="_blank" 
+                rel="noreferrer" 
+                style={styles.largeSocialIcon}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#10b981';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.lastChild.style.color = '#10b981';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#a3a3a3';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.lastChild.style.color = '#737373';
+                }}
+              >
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+                <span style={styles.iconLabel}>Facebook</span>
+              </a>
+
+              {/* EMAIL MAILTO RELAY PORT */}
+              <a 
+                href="mailto:rajanpandey492222@gmail.com" 
+                style={styles.largeSocialIcon}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#10b981';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.lastChild.style.color = '#10b981';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#a3a3a3';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.lastChild.style.color = '#737373';
+                }}
+              >
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span style={styles.iconLabel}>Email</span>
+              </a>
+
             </div>
           </div>
         </section>
@@ -375,14 +417,10 @@ const App = () => {
         </div>
       )}
 
-      {/* FOOTER PIPELINE */}
+      {/* FOOTER METADATA PIPELINE */}
       <footer style={styles.footer}>
-        <div>© 2026 RAJAN PANDEY. FULL-STACK HARDWARE & INFRASTRUCTURE LOGGED.</div>
-        <div style={{ display: 'flex', gap: '1.5rem' }}>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" style={{ color: '#10b981', textDecoration: 'none' }}>LinkedIn Security Node</a>
-          <span style={{ color: '#262626' }}>|</span>
-          <span style={{ color: '#737373'}}>Loc: Kathmandu</span>
-        </div>
+        <div>© 2026 RAJAN PANDEY. ALL PLATFORM NETWORKS SECURED.</div>
+        <div>LOC // KATHMANDU, NEPAL</div>
       </footer>
     </div>
   );
