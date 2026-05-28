@@ -190,7 +190,7 @@ const App = () => {
           <div style={styles.grid2Col}>
             <div style={styles.expCard}>
               <span style={styles.dateTag}>2025</span>
-              <h3 style={{fontSize: '1.2rem', fontWeight: 'bold', margin: '0.5rem 0', color: '#fff'}}>AI and Decentralized Intern</h3>
+              <h3 style={{fontSize: '1.2rem', fontWeight: 'bold', margin: '0.5rem 0', color: '#fff'}}>Decentralized AI Intern</h3>
               <p style={{fontSize: '0.8rem', color: '#10b981', margin: '0 0 1rem 0'}}>BlockSeBlock — India (Remote Collaboration)</p>
               <p style={{fontFamily: 'sans-serif', fontSize: '0.875rem', color: '#a3a3a3', lineHeight: '1.6'}}>
                 Developed robust full-stack web applications and AI-powered agents by integrating models into active production frameworks, focusing specifically on decentralized systems like OpenXai and Ollama. Built optimized python backend configurations via Flask and engineered fluid interfaces while debugging and testing applications for clean, scalable operations.
@@ -214,7 +214,7 @@ const App = () => {
           <div style={styles.grid2Col}>
             <div style={styles.projectCard}>
               <div style={styles.projectBody}>
-                <h3 style={styles.projectTitle}>Vision Automated Attendance Rig</h3>
+                <h3 style={styles.projectTitle}>Vision Automated Attendance system</h3>
                 <p style={styles.projectText}>
                   Academic Minor Project consisting of an end-to-end real-time machine learning pipeline. Implements face tracking via <strong>MediaPipe</strong> and <strong>OpenCV</strong> on a <strong>Raspberry Pi core</strong>, passing processed grayscale frames into a Random Forest Classifier model. Manages record keeping via a custom <strong>Flask backend</strong> featuring <strong>SQLAlchemy</strong> data pipes and <strong>MySQL</strong> with strict duplicate suppression constraints.
                 </p>
@@ -234,7 +234,7 @@ const App = () => {
 
             <div style={styles.projectCard}>
               <div style={styles.projectBody}>
-                <h3 style={styles.projectTitle}>Ollama Multilingual Voice Bot</h3>
+                <h3 style={styles.projectTitle}>Ollama Multilingual Chat/Voice Bot</h3>
                 <p style={styles.projectText}>
                   A conversational framework running localized <strong>LLaMA3 structures via Ollama</strong>. Supports native real-time text and speech conversion pipelines (STT & TTS) with secure user authorization powered by **JWT**. Stores persistent conversation maps dynamically within <strong>MongoDB Atlas</strong> database environments.
                 </p>
@@ -285,7 +285,7 @@ const App = () => {
               <span style={styles.dateTag}>2022 - 2026</span>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', margin: '0.5rem 0' }}>B.E. Electronics & Info</h3>
               <p style={{ fontSize: '0.8rem', color: '#737373', margin: '0 0 0.5rem 0' }}>Kathford College // Tribhuwan University IOE</p>
-              <p style={{ fontSize: '0.85rem', color: '#a3a3a3', margin: 0 }}>Active specialization in hardware integration and deep learning applications.</p>
+              <p style={{ fontSize: '0.85rem', color: '#a3a3a3', margin: 0 }}>focused on hardware integration, backend systems, cybersecurity, and AI applications</p>
             </div>
             <div style={styles.expCard}>
               <span style={styles.dateTag}>High School</span>
@@ -294,7 +294,7 @@ const App = () => {
               <p style={{ fontSize: '0.85rem', color: '#10b981', fontWeight: 'bold', margin: 0 }}>GPA Metric: 3.19</p>
             </div>
             <div style={styles.expCard}>
-              <span style={styles.dateTag}>SEE Node</span>
+              <span style={styles.dateTag}>SEE </span>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', margin: '0.5rem 0' }}>Secondary Education</h3>
               <p style={{ fontSize: '0.8rem', color: '#737373', margin: '0 0 0.5rem 0' }}>Mahendra Higher Secondary School</p>
               <p style={{ fontSize: '0.85rem', color: '#22d3ee', fontWeight: 'bold', margin: 0 }}>GPA Metric: 3.65</p>
