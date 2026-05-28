@@ -112,7 +112,7 @@ const App = () => {
           <div style={styles.pulseDot}></div>
           <span>RAJAN PANDEY // MULTI_STACK_NODE</span>
         </div>
-        <div style={{ fontSize: '0.75rem', color: '#737373' }}>[ ENGINE: TU_IOE_2022_2026 ]</div>
+        <div style={{ fontSize: '0.75rem', color: '#737373' }}>[ Rajan Sarkar's Portfolio ]</div>
       </header>
 
       <main style={styles.main}>
