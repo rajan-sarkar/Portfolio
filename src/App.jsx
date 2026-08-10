@@ -285,7 +285,7 @@ const App = () => {
               <span style={styles.dateTag}>2022 - 2026</span>
               <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', margin: '0.5rem 0' }}>B.E. Electronics & Info</h3>
               <p style={{ fontSize: '0.8rem', color: '#737373', margin: '0 0 0.5rem 0' }}>Kathford College // Tribhuwan University IOE</p>
-              <p style={{ fontSize: '0.85rem', color: '#a3a3a3', margin: 0 }}>focused on hardware integration, backend systems, cybersecurity, and AI applications</p>
+              <p style={{ fontSize: '0.85rem', color: '#a3a3a3', margin: 0 }}>Focused on hardware integration, backend systems, cybersecurity, and AI applications</p>
             </div>
             <div style={styles.expCard}>
               <span style={styles.dateTag}>High School</span>
@@ -326,9 +326,9 @@ const App = () => {
         <section id="contact">
           <h2 style={styles.sectionTitle}>.Connect_Me()</h2>
           <div style={styles.contactWrapper}>
-            <div style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#22d3ee' }}>// INITIALIZE PORTS FOR SYSTEM HANDSHAKE</div>
+            <div style={{ fontSize: '1.125rem', fontWeight: 'bold', color: '#22d3ee' }}>// Explore my work, projects, and technical journey.</div>
             <p style={{ fontFamily: 'sans-serif', color: '#a3a3a3', margin: '0 0 1rem 0', maxWidth: '28rem', fontSize: '0.875rem', lineHeight: '1.5' }}>
-              Select an external link protocol below to coordinate direct communication channels or view active platform nodes.
+              Connect with me through the links below and discover what I’m building.
             </p>
             
             <div style={styles.socialDockCentered}>
