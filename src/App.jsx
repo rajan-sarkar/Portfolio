@@ -335,7 +335,7 @@ const App = () => {
               
               {/* LINKEDIN PROFILE ACCESS PORT */}
               <a 
-                href="https://www.linkedin.com/in/rajan-pandey-sarkar-rajan/" 
+                href="https://www.linkedin.com/in/rajansarkarpandey/" 
                 target="_blank" 
                 rel="noreferrer" 
                 style={styles.largeSocialIcon}
